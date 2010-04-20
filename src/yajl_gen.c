@@ -39,6 +39,10 @@
 #include <stdio.h>
 #include <math.h>
 
+#include <ieeefp.h>
+
+int isinf(double x) { return !finite(x) && x==x; }
+
 typedef enum {
     yajl_gen_start,
     yajl_gen_map_start,
